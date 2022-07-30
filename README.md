@@ -5,11 +5,10 @@ This project demonstrates how to create a continuous integration pipeline such t
 
 ---
 ## Pre-requisites & Installation guide
-### Install git
-https://git-scm.com/downloads
+Working knowledge of CICD, aws, a code editor.
 
 ### Create an EC2 instance
-
+In your security group inboud rules setting, open ssh for port 22 - custom and open tcp for port 80 - anywhere
 ### 
 
 ---
@@ -57,5 +56,16 @@ The workflow for this project has already been setup but if you would like to se
 Navigate to actions tab on the in the repository and select ```Java with Maven```. 
 ![cicd4 1](https://user-images.githubusercontent.com/89241109/181905910-80c574ac-8b83-4eaa-979e-ee3448403cc3.png)
 
-Inside the workflow, in jobs >> builds >> runs-on, change ```ubuntu-latest``` to ```self-hosted``` because we are using a self-hosted runner. You can take out the ```pull_request: branches``` since it is not necessary.
+Inside the workflow, in jobs >> builds >> runs-on, change ```ubuntu-latest``` to ```self-hosted``` because we are using a self-hosted runner. You can take out the ```pull_request: branches``` since it is not necessary, then commit.
 ![cicd5 1](https://user-images.githubusercontent.com/89241109/181905914-52a72a71-599d-422f-aa57-f6094d457831.png)
+
+### Step 6: Installing dependencies
+Jdk needs to be installed in the instance. In the actions-runner directory, ```cd`` and update pacakages first
+```
+sudo apt update
+```
+Then
+```
+sudo apt install maven openjdk-11-jre openjdk-11-jdk
+```
+With dependencies in place, builds made will run and be isble on github
