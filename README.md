@@ -54,4 +54,8 @@ This command automatically connects your project with Github/the repo.
 
 ### Step 5: Setup Workflow
 The workflow for this project has already been setup but if you would like to set it up your own, delete the ```maven.yml``` file.
-Navigate to actions tab on the in the repository and select ```Java with Maven```. Inside the workflow, in jobs >> builds >> runs-on, change ```ubuntu-latest``` to ```self-hosted``` because we are using a self-hosted runner. You can take out the ```pull_request: branches``` since it is not necessary.
+Navigate to actions tab on the in the repository and select ```Java with Maven```. 
+![cicd4 1](https://user-images.githubusercontent.com/89241109/181905910-80c574ac-8b83-4eaa-979e-ee3448403cc3.png)
+
+Inside the workflow, in jobs >> builds >> runs-on, change ```ubuntu-latest``` to ```self-hosted``` because we are using a self-hosted runner. You can take out the ```pull_request: branches``` since it is not necessary.
+![cicd5 1](https://user-images.githubusercontent.com/89241109/181905914-52a72a71-599d-422f-aa57-f6094d457831.png)
