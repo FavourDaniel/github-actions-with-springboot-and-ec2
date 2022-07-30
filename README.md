@@ -9,4 +9,26 @@ This project demonstrates how to create a continuous integration pipeline such t
 https://git-scm.com/downloads
 
 ### Create an EC2 instance
-https://youtu.be/wcy0ktHDnT4
+
+### 
+
+---
+## Project Setup
+### Step 1: Clone this repository
+```
+git clone <REPO_URL>
+```
+### Step 2: Edit the repo by adding your instance details where expected.
+
+### Step 3: ssh into your ec2 instance
+```
+sudo ssh -i "yourkeypairname.pem" instancetype@instancepubliciddress.region.compute.amazonaws.com
+```
+If you do not understand the above, the below is an example
+```
+sudo ssh -i "cicdkey.pem" ubuntu@ec3-4-5-22-13.us-east-1.compute.amazonaws.com
+```
+NB: ensure you are in the directory where your key pair is present.
+
+Step 4: Setup Github Actions
+Push the project t github and in the settings tab, select Actions >> Runners >> Then create a new self-hosted runner
