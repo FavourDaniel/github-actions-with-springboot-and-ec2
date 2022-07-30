@@ -13,7 +13,7 @@ https://git-scm.com/downloads
 ### 
 
 ---
-## Project Setup
+# Project Setup
 ### Step 1: Clone this repository
 ```
 git clone <REPO_URL>
