@@ -33,12 +33,12 @@ NB: ensure you are in the directory where your key pair is present.
 ### Step 4: Setup Github Actions
 Push the project to github and in the settings tab, select Actions >> Runners >> Then create a new self-hosted runner
 
-![cicd](https://user-images.githubusercontent.com/89241109/181904967-702f91ac-cb0b-4758-a7ad-faadb98a8e04.png)
+![cicd 1](https://user-images.githubusercontent.com/89241109/181905295-dba86632-5248-4653-8acb-84575e4e90a4.png)
 
 After creating the self-hosted runner, select the runner image depending on what kind of instance you created, the copy and paste all the commands under ```Download``` to your ec2 instance which you have sshed into
-![cicd2](https://user-images.githubusercontent.com/89241109/181905050-22e9c360-fea1-4fd6-9426-4013f6faf571.png)
+![cicd2 1](https://user-images.githubusercontent.com/89241109/181905305-29f3417f-dbf3-4234-bcb4-0c8bc09a6a59.png)
 
 Once you have copied and pasted the ```Download``` commands, copy and past the ```Configure``` commands as well
-![cicd3](https://user-images.githubusercontent.com/89241109/181905123-b2ddeeda-ca9f-4244-b6f1-83135ef48b24.png)
+![cicd3 1](https://user-images.githubusercontent.com/89241109/181905312-79268e5f-5e41-4cce-853a-834eeae79e0f.png)
 
 
