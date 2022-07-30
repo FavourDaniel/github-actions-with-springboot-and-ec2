@@ -41,4 +41,17 @@ After creating the self-hosted runner, select the runner image depending on what
 Once you have copied and pasted the ```Download``` commands, copy and past the ```Configure``` commands as well
 ![cicd3 1](https://user-images.githubusercontent.com/89241109/181905312-79268e5f-5e41-4cce-853a-834eeae79e0f.png)
 
+### Step 5: Further Installations
+After setup, some specifics in the project need to be installed for the runner to do its work. If you ```ls``` you would see the files that the runner presently contains.
+```
+sudo ./svc.sh install
+```
+After installing in, start it
+```
+sudo ./svc.sh start
+```
+This command automatically connects your project with Github/the repo.
 
+### Step 5: Setup Workflow
+The workflow for this project has already been setup but if you would like to set it up your own, delete the ```maven.yml``` file.
+Navigate to actions tab on the in the repository and select ```Java with Maven```. Inside the workflow, in jobs >> builds >> runs-on, change ```ubuntu-latest``` to ```self-hosted``` because we are using a self-hosted runner. You can take out the ```pull_request: branches``` since it is not necessary.
