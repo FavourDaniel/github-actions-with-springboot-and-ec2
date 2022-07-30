@@ -8,7 +8,8 @@ This project demonstrates how to create a continuous integration pipeline such t
 Working knowledge of CICD, aws, a code editor.
 
 ### Create an EC2 instance
-In your security group inboud rules setting, open ssh for port 22 - custom and open tcp for port 80 - anywhere
+- In your security group inboud rules setting, open ssh for port 22 - custom and open tcp for port 80 - anywhere
+- Allocate an elastic IP address to your instance to provide you with a static ip (optional)
 ### 
 
 ---
@@ -68,4 +69,6 @@ Then
 ```
 sudo apt install maven openjdk-11-jre openjdk-11-jdk
 ```
-With dependencies in place, builds made will run and be isble on github
+With dependencies in place, builds made will run and be visble on github
+
+You can check your instance ip address to view the site.
