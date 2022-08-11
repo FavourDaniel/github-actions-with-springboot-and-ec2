@@ -3,6 +3,7 @@
 
 name: Java CI with Maven
 
+#trigger when anything is pushed to the main branch
 on:
   push:
     branches: [ "main" ]
@@ -10,10 +11,14 @@ on:
 jobs:
   build:
 
+    #build will run on a self-hosted server
     runs-on: self-hosted
 
     steps:
+    #check out repository and clone repository to the self-hosted server
     - uses: actions/checkout@v3
+    
+    #set up Java on the server
     - name: Set up JDK 11
       uses: actions/setup-java@v3
       with:
